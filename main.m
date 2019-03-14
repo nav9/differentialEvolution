@@ -59,7 +59,7 @@ for gen = 1:generations
         %don't mutate or crossover the one with best fitness
         if fittest == p, U(:, p) = X(:, p);continue;end
         %Select three vectors for mutation
-        randX = linspace(1, population, population);randX(fittest)=[];
+        randX = linspace(1, population, population);randX(p)=[];
         px1 = ceil(rand(1,1)*numel(randX));x1 = randX(px1);randX(px1)=[];
         px2 = ceil(rand(1,1)*numel(randX));x2 = randX(px2);randX(px2)=[];
         px3 = ceil(rand(1,1)*numel(randX));x3 = randX(px3);   
